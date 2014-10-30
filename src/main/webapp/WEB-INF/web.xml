@@ -5,7 +5,10 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          metadata-complete="false">
-
+        <servlet>
+            <servlet-name>javax.ws.rs.core.Application</servlet-name>
+            <load-on-startup>1</load-on-startup>
+        </servlet>
          <servlet>
                   <servlet-name>health</servlet-name>
                   <jsp-file>/health.jsp</jsp-file>
@@ -14,6 +17,12 @@
                   <servlet-name>health</servlet-name>
                   <url-pattern>/health</url-pattern>
          </servlet-mapping>
+
+
+        <servlet-mapping>
+            <servlet-name>javax.ws.rs.core.Application</servlet-name>
+            <url-pattern>/ws/*</url-pattern>
+        </servlet-mapping>
          
 </web-app>
 
