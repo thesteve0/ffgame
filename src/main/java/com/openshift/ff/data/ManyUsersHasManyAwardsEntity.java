@@ -24,7 +24,7 @@ public class ManyUsersHasManyAwardsEntity {
     }
 
     @Id
-    @Column(name = "awardsid_awards")
+    @Column(name = "awardsid_awards", insertable=false, updatable=false)
     public int getAwardsidAwards() {
         return awardsidAwards;
     }
