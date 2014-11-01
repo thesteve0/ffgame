@@ -30,6 +30,7 @@ public class RewardWS {
         // Return some cliched textual content
         Integer userid = user.getUsersid();
         Query query = em.createQuery("select a.awardsid from AwardsEntity a where a.awardname = :name", AwardsEntity.class);
+        query.setParameter("name", "Welcome");
         Integer awardid = (Integer) query.getSingleResult();
 
         ManyUsersHasManyAwardsEntity awardUser = new ManyUsersHasManyAwardsEntity();
