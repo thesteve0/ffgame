@@ -34,7 +34,7 @@ public class RewardWS {
         // Return some cliched textual content
         Integer userid = user.getUsersid();
         System.out.println(userid);
-        AwardsEntity welcomeAward = em.createNamedQuery("Awards.findByAwardName", AwardsEntity.class).setParameter("name", userid).getSingleResult();
+        AwardsEntity welcomeAward = em.createNamedQuery("Awards.findByAwardName", AwardsEntity.class).setParameter("name", "Welcome").getSingleResult();
         //Query query = em.createQuery("select a.awardsid from AwardsEntity a where a.awardname like 'Welcome'");
         /*
         query.setParameter("name", "Welcome");
