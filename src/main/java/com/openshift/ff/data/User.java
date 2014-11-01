@@ -12,7 +12,7 @@ public class User {
     private String nick;
     private Integer points;
     private String notes;
-    public static String entrytimestamp = "";
+    private String entrytimestamp;
 
     public int getUsersid() {
         return usersid;
@@ -46,11 +46,11 @@ public class User {
         this.notes = notes;
     }
 
-    public static String getEntrytimestamp() {
+    public String getEntrytimestamp() {
         return entrytimestamp;
     }
 
-    public static void setEntrytimestamp(String entrytimestamp) {
-        User.entrytimestamp = entrytimestamp;
+    public void setEntrytimestamp(String entrytimestamp) {
+        this.entrytimestamp = entrytimestamp;
     }
 }
