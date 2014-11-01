@@ -29,15 +29,19 @@ public class RewardWS {
     public ManyUsersHasManyAwardsEntity giveNewUserReward(User user) {
         // Return some cliched textual content
         Integer userid = user.getUsersid();
+        System.out.println(userid);
+        /*
         Query query = em.createQuery("select a.awardsid from AwardsEntity a where a.awardname = :name", AwardsEntity.class);
         query.setParameter("name", "Welcome");
         Integer awardid = (Integer) query.getSingleResult();
-
+        */
         ManyUsersHasManyAwardsEntity awardUser = new ManyUsersHasManyAwardsEntity();
+
+        /*
         awardUser.setAwardsidAwards(awardid);
         awardUser.setUsersidUsers(userid);
         em.persist(awardUser);
-
+        */
         return awardUser;
 
     }
