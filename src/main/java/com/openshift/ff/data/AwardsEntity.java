@@ -9,6 +9,7 @@ import java.util.Calendar;
  */
 @Entity
 @Table(name = "awards", schema = "public", catalog = "flatfluffy")
+@NamedQuery(name = "Awards.findByAwardName", query = "select a from AwardsEntity a where a.awardname = :name")
 public class AwardsEntity {
     private int awardsid;
     private String awardname;
