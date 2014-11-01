@@ -22,6 +22,7 @@ public class RewardWS {
     @PersistenceContext(name = "awards")
     EntityManager em;
 
+
     @POST
     @Consumes("application/json")
     @Produces("application/json")
