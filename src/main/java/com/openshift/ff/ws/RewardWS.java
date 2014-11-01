@@ -33,20 +33,16 @@ public class RewardWS {
     public ManyUsersHasManyAwardsEntity giveNewUserReward(User user) {
         // Return some cliched textual content
         Integer userid = user.getUsersid();
-        System.out.println(userid);
+        //Get the id for the WElcome award
         AwardsEntity welcomeAward = em.createNamedQuery("Awards.findByAwardName", AwardsEntity.class).setParameter("name", "Welcome").getSingleResult();
-        //Query query = em.createQuery("select a.awardsid from AwardsEntity a where a.awardname like 'Welcome'");
-        /*
-        query.setParameter("name", "Welcome");
-        Integer awardid = (Integer) query.getSingleResult();
-        */
-        ManyUsersHasManyAwardsEntity awardUser = new ManyUsersHasManyAwardsEntity();
+        Integer awardid = welcomeAward.getAwardsid();
 
-        /*
+
+        ManyUsersHasManyAwardsEntity awardUser = new ManyUsersHasManyAwardsEntity();
         awardUser.setAwardsidAwards(awardid);
         awardUser.setUsersidUsers(userid);
         em.persist(awardUser);
-        */
+
         return awardUser;
 
     }
