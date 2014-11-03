@@ -50,8 +50,8 @@ public class RewardWS {
     @GET
     @Produces("application/json")
     public List usersAwards(){
-        ArrayList rewards = new ArrayList();
-        //TODO fill in later
+        List rewards = new ArrayList();
+        rewards = em.createQuery("select m from ManyUsersHasManyAwardsEntity m").getResultList();
         return rewards;
     }
 
